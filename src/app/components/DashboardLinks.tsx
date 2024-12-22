@@ -45,7 +45,7 @@ export function DashboardLinks() {
         <>
         {dashboardLinks.map((link) => (
             <Link key={link.id} href={link.href} className={cn("flex items-center gap-3 px-3 py-2  rounded-lg  hover:text-primary transition-all", pathname === link.href ? "bg-primary/10 text-primary" : "text-muted-foreground")}>
-                <link.icon size={20} className="h-8 w-8"/>
+                <link.icon size={16} className="h-5 w-5"/>
                 <p className="text-sm font-medium">{link.name}</p>  
             </Link> 
         ))}
