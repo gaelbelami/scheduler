@@ -32,8 +32,8 @@ export async function OnbordingActions( prevState: any,  formData: FormData) {
         },
         data: {
             username:submission.value.username,
-            name: submission.value.fullName,
+            name: submission.value.fullname,
         }
     })
-    redirect("/dashboard")
+    redirect("/onboarding/grant-id")
 }

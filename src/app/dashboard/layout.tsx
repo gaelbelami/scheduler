@@ -19,10 +19,15 @@ async function getData(userId: string) {
         },
         select: {
             username: true,
+            grantID: true,
         },
     });
     if(!data?.username) {
         return redirect("/onboarding");
+    }
+
+    if(!data?.grantID) {
+        return redirect("/onboarding/grant-id");
     }
     return data;
 }
@@ -50,7 +55,7 @@ export default async function Dashboard ({children} : {children: React.ReactNode
             <div className="flex flex-col">
                 <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
                     <Sheet>
-                        <SheetTrigger aschild>
+                        <SheetTrigger>
                             <Button className="md:hidden shrink-0" size="icon" variant="outline">
                                 <Menu size={20} />
                             </Button>
