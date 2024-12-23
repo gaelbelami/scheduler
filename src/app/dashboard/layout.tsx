@@ -60,7 +60,7 @@ export default async function Dashboard({
               <Link href="/" className="flex items-center gap-2 ">
                 {" "}
                 <Image src="/logo.png" width={30} height={30} alt="logo" />
-                <p className="text-primary font-bold text-xl">Scheduler</p>
+                <p className="text-primary font-bold text-xl">PlanWise</p>
               </Link>
             </div>
             <div className="flex-1 mt-2">

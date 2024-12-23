@@ -25,7 +25,7 @@ export default function OnboardingRoute(){
         <Card>
             <CardHeader>
                 <CardTitle>
-                    Welcome to Scheduler
+                    Welcome to PlanWise
                 </CardTitle>
                 <CardDescription>
                     We need the following information to set up your accout
@@ -40,7 +40,7 @@ export default function OnboardingRoute(){
                 <div className="grid gap-y-2">
                     <Label htmlFor="username">Username</Label>
                     <div className="flex rounded-md">
-                        <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 border-muted bg-muted text-sm text-muted-foreground">scheduler.com/</span>
+                        <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 border-muted bg-muted text-sm text-muted-foreground">PlanWise.com/</span>
                         <Input name={fields.username.name} key={fields.username.key} defaultValue={fields.username.initialValue} type="text" id="name" className="rounded-l-none border-l-0" placeholder="@john_doe"/>
                     </div>
                     <p className="text-red-500 text-sm">{fields.username.errors}</p>

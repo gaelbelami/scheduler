@@ -1,5 +1,4 @@
 import { conformZodMessage } from '@conform-to/zod';
-import { profile } from 'console';
 import { z } from 'zod'
 
 export const onboardingSchemaLocale = z.object({
@@ -54,4 +53,13 @@ export function onboardingSchema(options?: {
 export const settingsSchema = z.object({
   fullname: z.string().min(3).max(150),
  profileImage: z.string().url(),
+});
+
+
+export const eventTypeSchema = z.object({
+  title: z.string().min(3).max(150),
+  url: z.string().min(3).max(150),
+  duration: z.number().int().min(15).max(60),
+  description: z.string().min(3).max(300),
+  videoCallSoftware: z.string().min(3),
 });
