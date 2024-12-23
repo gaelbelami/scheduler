@@ -73,7 +73,7 @@ export default async function Dashboard({
         <div className="flex flex-col">
           <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
             <Sheet>
-              <SheetTrigger>
+              <SheetTrigger asChild>
                 <Button
                   className="md:hidden shrink-0"
                   size="icon"

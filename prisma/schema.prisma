@@ -25,6 +25,7 @@ model User {
   grantEmail    String?
   accounts      Account[]
   sessions      Session[]
+  Availability Availability[]
   // Optional for WebAuthn support
   // Authenticator Authenticator[]
 
@@ -69,4 +70,29 @@ model VerificationToken {
   expires    DateTime
 
   @@id([identifier, token])
+}
+
+
+model Availability {
+  id         String    @id @default(uuid())
+  day        Day
+  fromTime   String
+  tillTime   String
+  isActive   Boolean  @default(true)
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+}
+
+enum Day {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+  Sunday
 }
